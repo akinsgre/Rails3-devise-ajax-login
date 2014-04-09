@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.1.12'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -12,8 +12,8 @@ gem 'sqlite3'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails', '>= 3.1.7'
+  gem 'coffee-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -30,19 +30,20 @@ gem 'bcrypt-ruby'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-
+group :development do
+  gem 'awesome_print'
+end
 group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
 
-
-group :cucumber do
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'cucumber-rails'
-  gem 'rspec-rails'
-  gem 'spork'
-  gem 'launchy'    # So you can do Then show me the page
-  gem 'culerity'
-end  
+# group :cucumber do
+#   gem 'capybara'
+#   gem 'database_cleaner'
+#   gem 'cucumber-rails'
+#   gem 'rspec-rails'
+#   gem 'spork'
+#   gem 'launchy'    # So you can do Then show me the page
+#   gem 'culerity'
+# end  
